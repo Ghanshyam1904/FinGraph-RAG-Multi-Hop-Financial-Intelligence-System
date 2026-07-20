@@ -1,0 +1,52 @@
+# ============================================================
+# FinGraph RAG – Multi-Hop Financial Intelligence System
+# requirements.txt
+# ============================================================
+
+# ----- Core / LangChain Ecosystem -----
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-core>=0.2.0
+langgraph>=0.1.0                  # agent workflow / graph orchestration
+
+# ----- LLM Providers -----
+groq>=0.9.0                       # Groq API (LLaMA-3 inference)
+openai>=1.30.0                    # optional: GPT-4o fallback
+
+# ----- Embeddings -----
+langchain-huggingface>=0.0.3      # HuggingFace embedding wrapper
+sentence-transformers>=3.0.0      # local embedding models (e.g. BAAI/bge-small)
+huggingface-hub>=0.23.0
+
+# ----- Vector Store -----
+pinecone>=5.0.0                   # Pinecone vector database client
+
+# ----- Graph Database -----
+neo4j>=5.20.0                     # Neo4j Python driver (knowledge graph)
+
+# ----- Document Ingestion -----
+PyMuPDF>=1.24.0                   # fitz – PDF parsing for SEC filings
+requests>=2.31.0                  # HTTP calls (SEC EDGAR API, Tavily)
+python-dotenv>=1.0.0              # load .env variables
+
+# ----- Web / Search Tool -----
+tavily-python>=0.3.0              # Tavily search API integration
+
+# ----- Data Processing -----
+pandas>=2.2.0
+numpy>=1.26.0
+tqdm>=4.66.0                      # progress bars
+
+# ----- Evaluation -----
+ragas>=0.1.0                      # RAG evaluation framework
+
+# ----- API / Serving -----
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+streamlit>=1.35.0                 # optional: quick demo UI
+
+# ----- Dev / Testing -----
+pytest>=8.2.0
+python-dotenv>=1.0.0
+ipykernel>=6.29.0                 # Jupyter notebook support
+bs4
